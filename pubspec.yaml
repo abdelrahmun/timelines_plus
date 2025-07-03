@@ -15,5 +15,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_svg: ^2.2.0
 
 flutter:
+  assets:
+    - assets/

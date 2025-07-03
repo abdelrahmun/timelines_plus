@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'indicator_theme.dart';
 import 'timeline_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 /// [TimelineNode]'s indicator.
 mixin PositionedIndicator on Widget {
@@ -10,6 +11,7 @@ mixin PositionedIndicator on Widget {
   /// is also null, then this defaults to [TimelineThemeData.indicatorPosition].
   /// {@endtemplate}
   double? get position;
+
   double getEffectivePosition(BuildContext context) {
     return position ??
         IndicatorTheme.of(context).position ??
@@ -162,10 +164,10 @@ class ContainerIndicator extends Indicator {
   @override
   Widget build(BuildContext context) {
     final size = getEffectiveSize(context);
-    return SizedBox(
-      width: size,
-      height: size,
-      child: child,
+    return SvgPicture.asset(
+      'assets/time.svg',
+      width: 20,
+      height: 20,
     );
   }
 }
