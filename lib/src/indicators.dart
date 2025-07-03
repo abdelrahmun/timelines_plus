@@ -165,7 +165,7 @@ class ContainerIndicator extends Indicator {
   Widget build(BuildContext context) {
     final size = getEffectiveSize(context);
     return SvgPicture.asset(
-      'assets/time.svg',
+      'time.svg',
       width: 20,
       height: 20,
     );
